@@ -1,0 +1,12 @@
+{
+  "name": "ejercicio3",
+  "version": "1.0.0",
+  "description": "Esta prueba consiste en escribir un código de control de flujo asíncrono.",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gonzalo Rodríguez Muñoz",
+  "license": "ISC"
+}
