@@ -15,6 +15,7 @@ const onSuccess = function(response) {
     response.events,
     response.types
   );
+
   console.log("eventManager", eventManager.prototype);
   eventManager.run();
 };

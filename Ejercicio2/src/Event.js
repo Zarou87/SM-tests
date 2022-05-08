@@ -1,11 +1,12 @@
 export default class Event {
   // implement your code here...
-  constructor(type, message) {
+  constructor(second, type, message) {
+    this.second = second;
     this.type = type;
     this.message = message;
   }
 
   get eventAsString() {
-    return `{type: "${this.type}", message: "${this.type}"}`;
+    return `> At second ${this.second}: {type: "${this.type}", message: "${this.message}"}`;
   }
 }

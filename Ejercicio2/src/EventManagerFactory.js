@@ -4,14 +4,12 @@ import Event from "./Event";
 export default class EventManagerFactory {
   static create(events, types) {
     // implement your code here...
-    const eventManager = events.map((ev) => {
-      let currentEvent = new Event(ev.type, ev.message);
-      if (types.indexOf(currentEvent.type) > -1) {
-        console.log(`> At second ${ev.second}: ${currentEvent.eventAsString}`);
-      }
-      return currentEvent;
-    });
+    const eventManager = events
+      .filter((ev) => types.indexOf(ev.type) > -1)
+      .map((ev) => {
+        return new Event(ev.second, ev.type, ev.message);
+      });
 
-    return new EventManager();
+    return new EventManager(eventManager);
   }
 }
